@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Simón Ruiz Lara — Instituto de Ciencias Biológicas, Universidad de Talca</title>
-<meta name="description" content="Simón Ruiz Lara, Profesor Titular del Instituto de Ciencias Biológicas de la Universidad de Talca. Casi cuarenta años de trayectoria en investigación, docencia y gestión académica.">
+<meta name="description" content="Simón Ruiz Lara, Profesor Titular del Instituto de Ciencias Biológicas de la Universidad de Talca. Más de cuatro décadas de trayectoria en biología molecular vegetal, docencia, formación de investigadores y gestión académica.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%232E7D4F'/%3E%3Ctext x='32' y='42' font-family='Arial,Helvetica,sans-serif' font-weight='700' font-size='28' fill='%23FBFAF3' text-anchor='middle'%3ESR%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -140,6 +140,21 @@
     display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
   }
 
+  /* timeline rows (no vertical rules) */
+  .tline{margin:0 0 8px 60px;padding:0;list-style:none;max-width:600px;}
+  .tline li{padding:14px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:104px 1fr;gap:16px;}
+  .tline li:last-child{border-bottom:1px solid var(--line);}
+  .tline .yr{font-size:.82rem;font-weight:700;color:var(--accent);line-height:1.5;}
+  .tline strong{display:block;font-size:.97rem;font-weight:600;margin-bottom:3px;}
+  .tline .d{font-size:.88rem;color:var(--text-muted);}
+
+  /* small section sub-heading */
+  .sub-h{
+    margin:38px 0 14px 60px;font-size:.7rem;text-transform:uppercase;
+    letter-spacing:.14em;font-weight:700;color:var(--text-muted);
+  }
+  .sub-h + .lede{margin-top:0;}
+
   /* ---------------- RESPONSIVE ---------------- */
   @media (max-width:900px){
     :root{--sidebar-w:0px;}
@@ -149,7 +164,9 @@
     footer{margin-left:0;padding:24px 24px 40px;flex-direction:column;}
     .sec-head{gap:14px;}
     .sec-num{width:24px;}
-    .lede,.pillars,.rlines,.aside-note,.pubs,.proj-line,.more-link,.contact-box{margin-left:38px;}
+    .lede,.pillars,.rlines,.aside-note,.pubs,.proj-line,.more-link,.contact-box,.tline,.sub-h{margin-left:38px;}
+    .tline li{grid-template-columns:1fr;gap:4px;}
+    .tline .yr{font-size:.78rem;}
     .pillars{grid-template-columns:1fr;}
     .pillar{border-bottom:1px solid var(--line);padding:20px 0;}
     .pillar:last-child{border-bottom:none;}
@@ -183,10 +200,11 @@
   <p class="sb-name">Simón Ruiz Lara</p>
   <p class="sb-role">Profesor Titular</p>
   <p class="sb-inst">Instituto de Ciencias Biológicas<br>Universidad de Talca</p>
-  <p class="sb-tagline">Casi cuarenta años dedicados a la biología vegetal, la docencia y la formación de nuevos científicos en la Universidad de Talca.</p>
+  <p class="sb-tagline">Más de cuatro décadas dedicadas a la biología molecular vegetal, la docencia y la formación de nuevos científicos en la Universidad de Talca.</p>
 
   <ul class="sb-nav">
     <li><a href="#trayectoria">Trayectoria</a></li>
+    <li><a href="#docencia">Docencia y formación</a></li>
     <li><a href="#investigacion">Investigación</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
@@ -221,6 +239,7 @@
   <p class="sb-inst">Instituto de Ciencias Biológicas<br>Universidad de Talca</p>
   <ul class="sb-nav">
     <li><a href="#trayectoria">Trayectoria</a></li>
+    <li><a href="#docencia">Docencia y formación</a></li>
     <li><a href="#investigacion">Investigación</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
@@ -241,91 +260,152 @@
 <main>
 
   <div class="intro">
-    <p>Simón Ruiz Lara es Profesor Titular del Instituto de Ciencias Biológicas de la Universidad de Talca. A lo largo de casi cuarenta años ha combinado la investigación en biología molecular vegetal con la docencia de pregrado y postgrado, la formación de nuevas generaciones de científicos y distintas responsabilidades de gestión académica.</p>
-    <p>Es Doctor en Ciencias, mención Biología Molecular, por la Universidad Politécnica de Cataluña.</p>
+    <p>Simón Ruiz Lara es Profesor Titular del Instituto de Ciencias Biológicas de la Universidad de Talca, donde se incorporó como académico en 1982. Su trabajo combina la investigación en biología molecular vegetal con la docencia de pregrado y postgrado, la formación de investigadores y la conducción institucional.</p>
+    <p>Entre 2020 y 2025 dirigió el Instituto de Ciencias Biológicas. Actualmente dirige el grupo de investigación en Genómica Funcional en Plantas e integra el grupo Plant Stress Research de la Universidad de Talca.</p>
   </div>
 
   <!-- TRAYECTORIA -->
   <section id="trayectoria">
     <div class="sec-head"><span class="sec-num">01</span><h2>Trayectoria</h2></div>
-    <p class="lede">Una carrera construida en tres frentes, más que en uno solo.</p>
+    <p class="lede">Más de cuatro décadas en la Universidad de Talca, repartidas entre la investigación, la docencia y la conducción académica.</p>
 
     <div class="pillars">
       <div class="pillar">
-        <span class="label">Docencia</span>
-        <h3>Pregrado y postgrado</h3>
-        <p>Docente en el Instituto de Ciencias Biológicas, formando a estudiantes de Bioquímica y de los programas de magíster y doctorado de la Universidad de Talca.</p>
+        <span class="label">Desde 1982</span>
+        <h3>Cuatro décadas</h3>
+        <p>Profesor instructor desde 1982, jerarquizado como Profesor Asociado en 1998 y como Profesor Titular en 2021 — el máximo nivel de la jerarquía académica en las universidades chilenas.</p>
       </div>
       <div class="pillar">
-        <span class="label">Formación</span>
-        <h3>Nuevos científicos</h3>
-        <p>Su laboratorio ha formado a decenas de estudiantes de pre y postgrado a lo largo de las últimas décadas, varios de ellos hoy colaboradores habituales en sus publicaciones.</p>
+        <span class="label">Gestión</span>
+        <h3>Conducción institucional</h3>
+        <p>Director del Instituto de Ciencias Biológicas entre 2020 y 2025, y fundador del primer programa de doctorado acreditado de la Universidad de Talca.</p>
       </div>
       <div class="pillar">
-        <span class="label">Gestión académica</span>
-        <h3>Construyendo institución</h3>
-        <p>Parte del grupo fundador, en 2001, del primer programa doctoral de la Universidad de Talca — hoy con 25 años de trayectoria — además de distintas responsabilidades de gestión en el Instituto.</p>
+        <span class="label">Comunidad científica</span>
+        <h3>Evaluación y organización</h3>
+        <p>Evaluador de proyectos para FONDECYT, FONDEF y CONICET de Argentina, organizador de cuatro simposios internacionales y parte de la directiva de la Sociedad de Bioquímica y Biología Molecular de Chile.</p>
       </div>
     </div>
 
-    <p class="aside-note"><b>Doctorado en Ciencias, mención Biología Vegetal y Biotecnología:</b> fundado el 12 de enero de 2001 como "Doctorado en Ciencias mención Ingeniería Genética Vegetal", fue el primer programa doctoral de la Universidad de Talca acreditado por la CNA. En 2026 celebró 25 años de aporte a la formación de investigadores en Chile. Fuente: <a href="https://www.utalca.cl/noticias/doctorado-de-la-utalca-celebro-25-anos-de-aporte-al-desarrollo-cientifico/" target="_blank" rel="noopener">Universidad de Talca</a>.</p>
+    <p class="sub-h">Formación académica</p>
+    <ul class="tline">
+      <li><span class="yr">1993</span><div><strong>Doctor en Ciencias, mención Biología Molecular</strong><span class="d">Universidad Politécnica de Cataluña. Tesis desarrollada entre 1989 y 1993 en el Centro de Investigación y Desarrollo de Barcelona, del Consejo Superior de Investigaciones Científicas de España (CSIC).</span></div></li>
+      <li><span class="yr">1991</span><div><strong>Licenciatura en Biología</strong><span class="d">Homologada por el Ministerio de Educación y Ciencia de España.</span></div></li>
+      <li><span class="yr">1989</span><div><strong>Magíster en Ciencias Biológicas</strong><span class="d">Universidad de Chile.</span></div></li>
+      <li><span class="yr">1981</span><div><strong>Profesor de Estado en Biología y Ciencias</strong><span class="d">Universidad de Chile.</span></div></li>
+    </ul>
+
+    <p class="sub-h">Gestión académica</p>
+    <ul class="tline">
+      <li><span class="yr">2020–2025</span><div><strong>Director del Instituto de Ciencias Biológicas</strong><span class="d">Universidad de Talca.</span></div></li>
+      <li><span class="yr">2016–2022</span><div><strong>Director del Programa de Doctorado en Ciencias, mención Ingeniería Genética Vegetal</strong><span class="d">Segundo período a cargo del programa que él mismo fundó.</span></div></li>
+      <li><span class="yr">2011–2013</span><div><strong>Director del Área de Biología Molecular y Biotecnología</strong><span class="d">Instituto de Ciencias Biológicas, Universidad de Talca.</span></div></li>
+      <li><span class="yr">2001–2006</span><div><strong>Fundador y primer Director del Programa de Doctorado</strong><span class="d">Obtuvo en 2005 la acreditación del programa ante la Comisión Nacional de Acreditación de Postgrado del Ministerio de Educación, la primera de un doctorado de la Universidad de Talca.</span></div></li>
+      <li><span class="yr">2000–2015</span><div><strong>Comisión de Calificación Académica</strong><span class="d">Evaluación periódica de los académicos de planta del Instituto de Ciencias Biológicas.</span></div></li>
+      <li><span class="yr">2000–2014</span><div><strong>Comité de Nombramientos y Promociones</strong><span class="d">Instancia que evalúa los antecedentes de los académicos que postulan a ascender en la jerarquía universitaria.</span></div></li>
+    </ul>
+
+    <p class="sub-h">Servicio a la comunidad científica</p>
+    <ul class="rlines">
+      <li><span class="mk">·</span><div><strong>Evaluación de proyectos</strong><span>Paneles de FONDECYT entre 1997 y 2024 y de FONDEF entre 2001 y 2015 en Chile, y de CONICET en Argentina entre 2003 y 2022.</span></div></li>
+      <li><span class="mk">·</span><div><strong>Organización de congresos</strong><span>Organizador responsable de cuatro simposios internacionales sobre estrés biótico y abiótico en plantas y sobre bioética en la investigación científica, entre 2005 y 2019.</span></div></li>
+      <li><span class="mk">·</span><div><strong>Sociedad de Bioquímica y Biología Molecular de Chile</strong><span>Miembro de la directiva entre 2004 y 2010.</span></div></li>
+    </ul>
+
+    <p class="aside-note"><b>El doctorado que fundó:</b> creado el 12 de enero de 2001 como "Doctorado en Ciencias, mención Ingeniería Genética Vegetal", fue el primer programa doctoral de la Universidad de Talca en obtener la acreditación de la CNA. Hoy se denomina "Doctorado en Ciencias, mención Biología Vegetal y Biotecnología" y en 2026 celebró 25 años de aporte a la formación de investigadores en Chile. Fuente: <a href="https://www.utalca.cl/noticias/doctorado-de-la-utalca-celebro-25-anos-de-aporte-al-desarrollo-cientifico/" target="_blank" rel="noopener">Universidad de Talca</a>.</p>
+  </section>
+
+  <!-- DOCENCIA Y FORMACIÓN -->
+  <section id="docencia">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Docencia y formación</h2></div>
+    <p class="lede">Docencia ininterrumpida desde 1982 y la formación directa de quince doctores en ciencias.</p>
+
+    <ul class="rlines">
+      <li><span class="mk">·</span><div><strong>Pregrado</strong><span>Responsable de las asignaturas de Biología Celular, Biología Molecular, Genética Molecular, Ingeniería Genética y Biotecnología Vegetal, dictadas a las carreras de Medicina, Odontología, Agronomía, Ingeniería Forestal, Ingeniería en Bioinformática, Bioquímica y Licenciatura en Biología.</span></div></li>
+      <li><span class="mk">·</span><div><strong>Postgrado</strong><span>Coordinador del curso Genes y Genomas Vegetales desde 2001 a la fecha, en el Doctorado en Ciencias mención Ingeniería Genética Vegetal. Miembro de claustro de programas de doctorado acreditados por la Comisión Nacional de Acreditación, lo que lo habilita para dirigir tesis doctorales.</span></div></li>
+      <li><span class="mk">·</span><div><strong>Profesor invitado</strong><span>Programa de Doctorado en Biotecnología de la Universidad de Barcelona.</span></div></li>
+    </ul>
+
+    <p class="sub-h">Formación de investigadores</p>
+    <ul class="tline">
+      <li><span class="yr">15 tesis</span><div><strong>Tesis doctorales dirigidas o codirigidas</strong><span class="d">Entre 2005 y 2025, siete de ellas en los últimos diez años. Varios de sus egresados son hoy colaboradores habituales en sus publicaciones.</span></div></li>
+      <li><span class="yr">10 tesis</span><div><strong>Tesis de pregrado conducentes al grado de licenciatura</strong><span class="d">En los últimos cinco años.</span></div></li>
+      <li><span class="yr">4 becarios</span><div><strong>Tutorías predoctorales</strong><span class="d">Becas Chile para la formación de capital humano avanzado (CONICYT), entre 2008 y 2020.</span></div></li>
+      <li><span class="yr">2 becarios</span><div><strong>Tutorías postdoctorales</strong><span class="d">Asociadas al proyecto FONDEF G07I-1003, entre 2013 y 2015.</span></div></li>
+    </ul>
+
+    <p class="aside-note">También ha integrado comisiones de evaluación de tesis de pregrado y de doctorado en programas de la Universidad de Talca y de otras universidades del país, y desde 2002 actúa como revisor de artículos para revistas científicas de corriente principal.</p>
   </section>
 
   <!-- INVESTIGACIÓN -->
   <section id="investigacion">
-    <div class="sec-head"><span class="sec-num">02</span><h2>Investigación</h2></div>
-    <p class="lede">Genómica funcional y biología molecular vegetal, con foco en tomate y vid.</p>
+    <div class="sec-head"><span class="sec-num">03</span><h2>Investigación</h2></div>
+    <p class="lede">Biología molecular y genómica funcional vegetal, con foco en los mecanismos de tolerancia al estrés abiótico en tomate y vid.</p>
 
     <ul class="rlines">
-      <li><span class="mk">·</span><div><strong>Elementos genéticos móviles en tomate</strong><span>Expresión génica de elementos genéticos móviles en variedades nativas y cultivadas.</span></div></li>
-      <li><span class="mk">·</span><div><strong>Secuencias reguladoras</strong><span>Aislamiento y caracterización de dichos elementos y de sus secuencias reguladoras.</span></div></li>
-      <li><span class="mk">·</span><div><strong>Tolerancia a estrés biótico y abiótico</strong><span>Expresión génica de genes de tolerancia en plantas nativas, incluyendo estrés salino.</span></div></li>
-      <li><span class="mk">·</span><div><strong>Vectores de transformación vegetal</strong><span>Desarrollo de vectores de clonaje para plantas de importancia económica.</span></div></li>
+      <li><span class="mk">·</span><div><strong>Tráfico vesicular y tolerancia salina</strong><span>Rab GTPasas, proteínas SNARE y complejos reguladores GEF de <em>Solanum chilense</em> y tomate, y su papel en la exclusión de sodio y la tolerancia al estrés salino.</span></div></li>
+      <li><span class="mk">·</span><div><strong>Genómica funcional en vid</strong><span>Transportadores y factores de transcripción asociados a la acumulación de flavonoides y al desarrollo reproductivo en <em>Vitis vinifera</em>.</span></div></li>
+      <li><span class="mk">·</span><div><strong>Estrés abiótico en especies de importancia agrícola</strong><span>Respuestas a sequía, salinidad y metales pesados, y estrategias biotecnológicas para conferir tolerancia en cultivos.</span></div></li>
+      <li><span class="mk">·</span><div><strong>Elementos genéticos móviles y secuencias reguladoras</strong><span>Retrotransposones de <em>Solanum chilense</em> y promotores inducibles por estrés, línea de trabajo que dio origen a sus dos patentes.</span></div></li>
     </ul>
 
-    <p class="lede" style="margin-top:-4px;">78 publicaciones científicas y cerca de 2.160 citas acumuladas (ResearchGate, índice h 23 según Semantic Scholar), con trabajos publicados desde 1992 hasta 2026. Selección de publicaciones representativas:</p>
+    <p class="sub-h">Publicaciones</p>
+    <p class="lede">Más de sesenta artículos publicados de forma continua desde 1992, con 2.016 citas e índice h 26 según Google Scholar, y un promedio cercano a 255 citas anuales en los últimos cinco años. Selección de publicaciones:</p>
 
     <div class="pubs">
       <div class="pub-row">
-        <div class="ti"><span class="pub-star">★</span> <a href="https://doi.org/10.1111/j.1365-3040.2010.02220.x" target="_blank" rel="noopener">The transcription factor SlAREB1 confers drought, salt stress tolerance and regulates biotic and abiotic stress-related genes in tomato</a></div>
-        <div class="mt">Plant, Cell &amp; Environment, 2010 — su trabajo más citado (239 citas)</div>
+        <div class="ti"><a href="https://doi.org/10.1093/jxb/erag259" target="_blank" rel="noopener">The link between phosphate starvation-triggered anthocyanin biosynthesis and jasmonate-driven regulation in tomato</a></div>
+        <div class="mt">Journal of Experimental Botany, 2026</div>
       </div>
       <div class="pub-row">
-        <div class="ti"><a href="https://doi.org/10.3389/fpls.2016.01166" target="_blank" rel="noopener">Differential roles for VviGST1, VviGST3, and VviGST4 in proanthocyanidin and anthocyanin transport in <em>Vitis vinifera</em></a></div>
-        <div class="mt">Frontiers in Plant Science, 2016</div>
+        <div class="ti"><a href="https://doi.org/10.1016/j.plaphy.2026.111607" target="_blank" rel="noopener">Sortin2: a chemical compound to enhance tolerance against salinity stress in <em>Arabidopsis thaliana</em></a></div>
+        <div class="mt">Plant Physiology and Biochemistry, 2026</div>
       </div>
       <div class="pub-row">
-        <div class="ti"><a href="https://doi.org/10.1111/nph.16521" target="_blank" rel="noopener">Root-knot nematodes induce gall formation by recruiting developmental pathways of post-embryonic organogenesis and regeneration</a></div>
-        <div class="mt">New Phytologist, 2020</div>
+        <div class="ti"><a href="https://doi.org/10.1016/j.plantsci.2026.113108" target="_blank" rel="noopener">VviAHA10, a tonoplast P3A-type ATPase from <em>Vitis vinifera</em>, reveals a functional link between vacuolar flavonoid accumulation and abiotic stress responses</a></div>
+        <div class="mt">Plant Science, 2026</div>
+      </div>
+      <div class="pub-row">
+        <div class="ti"><a href="https://doi.org/10.1111/pce.15229" target="_blank" rel="noopener">Tissue-specific regulation of vesicular trafficking mediated by Rab-GEF complex MON1/CCZ1 from <em>Solanum chilense</em> increases salt stress tolerance in <em>Arabidopsis thaliana</em></a></div>
+        <div class="mt">Plant, Cell and Environment, 2024</div>
       </div>
       <div class="pub-row">
         <div class="ti"><a href="https://doi.org/10.3389/fpls.2023.1212806" target="_blank" rel="noopener">A SNARE-like protein from <em>Solanum lycopersicum</em> increases salt tolerance by modulating vesicular trafficking in tomato</a></div>
         <div class="mt">Frontiers in Plant Science, 2023</div>
       </div>
       <div class="pub-row">
-        <div class="ti"><a href="https://doi.org/10.1016/j.plaphy.2024.108507" target="_blank" rel="noopener">Stress salinity in plants: new strategies to cope with in the foreseeable scenario</a></div>
-        <div class="mt">Plant Physiology and Biochemistry, 2024</div>
+        <div class="ti"><span class="pub-star">★</span> <a href="https://doi.org/10.1111/j.1365-3040.2010.02220.x" target="_blank" rel="noopener">The transcription factor SlAREB1 confers drought and salt stress tolerance and regulates biotic and abiotic stress-related genes in tomato</a></div>
+        <div class="mt">Plant, Cell &amp; Environment, 2010 — su trabajo más citado, con 312 citas</div>
       </div>
       <div class="pub-row">
-        <div class="ti"><a href="https://doi.org/10.1016/j.plantsci.2026.113108" target="_blank" rel="noopener">VviAHA10, a tonoplast P3A-type ATPase from <em>Vitis vinifera</em>, reveals a functional link between vacuolar flavonoid accumulation and abiotic stress responses</a></div>
-        <div class="mt">Plant Science, 2026</div>
+        <div class="ti"><span class="pub-star">★</span> Ethylene involvement in stress-induced expression of the TLC1.1 retrotransposon from <em>Lycopersicon chilense</em></div>
+        <div class="mt">Plant Physiology, 2005 — 148 citas</div>
       </div>
     </div>
     <p class="more-link">Lista completa en <a href="https://www.researchgate.net/profile/Simon-Ruiz-Lara" target="_blank" rel="noopener">ResearchGate</a> y <a href="https://scholar.google.com/citations?user=4eXnXkYAAAAJ&hl=es" target="_blank" rel="noopener">Google Scholar</a>.</p>
 
-    <p class="lede" style="margin-top:34px;">Proyectos con financiamiento competitivo, como investigador responsable:</p>
-    <p class="proj-line"><b>2021– · FONDECYT Regular.</b> Obtención de plantas comerciales de tomate de alto rendimiento con tolerancia a estrés salino mediante exclusión de sodio.</p>
-    <p class="proj-line"><b>2015–2017 · FONDECYT Regular.</b> Mejora del desempeño de plantas bajo estrés salino mediante una nueva estrategia de exclusión de sodio en hojas.</p>
-    <p class="proj-line"><b>2009–2013 · FONDEF.</b> Plataforma biotecnológica para la generación de tolerancia a déficit hídrico en plantas de importancia agrícola.</p>
+    <p class="sub-h">Proyectos con financiamiento competitivo</p>
+    <p class="lede">Ocho proyectos como investigador responsable desde 1995, financiados por FONDECYT, FONDEF y la Fundación para la Innovación Agraria, y ocho más como co-investigador. Los más recientes:</p>
+    <p class="proj-line"><b>2024–2027 · FONDECYT Regular N° 1241609 — en ejecución.</b> <em>Resilient Roots</em>: rol del tráfico vesicular endocítico en la tolerancia a la salinidad y a metales pesados en plantas de tomate.</p>
+    <p class="proj-line"><b>2021–2024 · FONDECYT Regular N° 1211180.</b> Obtención de plantas comerciales de tomate de alto rendimiento bajo estrés salino, con tolerancia basada en el fortalecimiento de la raíz para excluir sodio de los órganos aéreos.</p>
+    <p class="proj-line"><b>2017–2021 · FONDECYT Regular N° 1170554.</b> Fortalecimiento del sistema de exclusión de sodio de las hojas durante el estrés salino en plantas de cultivo.</p>
+    <p class="proj-line"><b>2014–2017 · FONDECYT Regular N° 1140686.</b> Mejora del desempeño vegetal bajo estrés salino mediante una nueva estrategia de exclusión de sodio en hojas.</p>
+    <p class="proj-line"><b>2010–2015 · FONDEF N° D08I-1118.</b> Plataforma biotecnológica para la generación de tolerancia a déficit hídrico en plantas de importancia agrícola.</p>
+    <p class="proj-line"><b>2002–2006 · FIA N° BIOT-01-A-065.</b> Banco de genes de tolerancia a estrés abiótico de plantas nativas para programas de mejoramiento genético.</p>
+    <p class="proj-line" style="margin-top:16px;"><b>Como co-investigador:</b> Centro de Excelencia CA2FST de ANID (2026–2031, en ejecución), Núcleo Milenio para el Desarrollo de Plantas Superadaptables (2021–2024) y FONDECYT Regular N° 1211311 sobre regulación transcripcional del tráfico de endomembranas (2021–2025), entre otros.</p>
+
+    <p class="sub-h">Patentes</p>
+    <p class="proj-line"><b>Promotor sintético que se induce por estrés abiótico.</b> Concedida en Chile por el Instituto Nacional de Propiedad Industrial (N° 2015/3143) y en Estados Unidos (N° 15/769.527), en agosto de 2020.</p>
+    <p class="proj-line"><b>Plant promoters induced by hydrological shortage and use thereof.</b> Solicitud de patente presentada en Estados Unidos (N° 14/089.960).</p>
   </section>
 
   <!-- CONTACTO -->
   <section id="contacto">
-    <div class="sec-head"><span class="sec-num">03</span><h2>Contacto</h2></div>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Contacto</h2></div>
     <div class="contact-box">
       <p>Para consultas académicas, colaboraciones o postulaciones a tesis, escríbeme directamente.</p>
       <a class="mail" href="mailto:sruiz@utalca.cl">sruiz@utalca.cl</a>
-      <p style="margin-top:18px;">Instituto de Ciencias Biológicas, Universidad de Talca — Talca, Región del Maule, Chile · +56 71 220 0268</p>
+      <p style="margin-top:18px;">Instituto de Ciencias Biológicas, Universidad de Talca — 2 Norte 685, Talca, Región del Maule, Chile · +56 71 220 0268</p>
     </div>
   </section>
 
